@@ -26,14 +26,20 @@ def out_txt():
     print ("Output exceeds 30 lines, sending output to: <logfile>")
     return "Hello World"
 
-    
+def easyprint (element,name):
+  for each_div in soup.findAll(element,{'class':name}):
+      print (each_div)
+          
 def portal():
     separator_parts()
-    print ("GET the title and print it:")
+    print ("GET the title and print it: "+soup.title.string)
     separator_items
-    print("GET the Complete Address of UFM:")
+    address=soup.find("a", {"href": "#myModal"})   
+    print("GET the Complete Address of UFM: "+address.text)
     separator_items
-    print("GET the phone number and info email:")
+    phone=soup.find("a", {"href": "tel:+50223387700"})
+    email=soup.find("a", {"href": "mailto:inf@ufm.edu"})   
+    print("GET the phone number and info email:"+phone+email)
     separator_items
     print("GET all item that are part of the upper nav menu (id: menu-table):")
     separator_items
@@ -51,17 +57,20 @@ def estudios():
     separator_parts()
     print("display all items from 'topmenu' (8 in total):")   
     separator_items
-    print("display ALL 'Estudios'")
+    print("display ALL 'Estudios':")
     separator_items
-    print("display from 'leftbar' all <li> items")
+    print("display from 'leftbar' all <li> items:")
     separator_items
-    print("get and display all available social media with its links")
+    print("get and display all available social media with its links:")
     separator_items
     print("count all <a>:")
     
 def cs():
     separator_parts()
+    
 output = out_txt()
 file = open("sample.txt","w")
 file.write(output)
 file.close()
+
+portal()
