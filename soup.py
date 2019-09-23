@@ -26,17 +26,41 @@ def out_txt():
     print ("Output exceeds 30 lines, sending output to: <logfile>")
     return "Hello World"
 
+    
 def portal():
+    separator_parts()
     print ("GET the title and print it:")
+    separator_items
     print("GET the Complete Address of UFM:")
+    separator_items
     print("GET the phone number and info email:")
+    separator_items
     print("GET all item that are part of the upper nav menu (id: menu-table):")
+    separator_items
     print("find all properties that have href (link to somewhere):")
+    separator_items
     print("GET href of 'UFMail' button:")
+    separator_items
     print("GET href 'MiU' button:")
+    separator_items
     print("get hrefs of all <img>")
+    separator_items
+    print("count all <a>:")
+ 
+def estudios():
+    separator_parts()
+    print("display all items from 'topmenu' (8 in total):")   
+    separator_items
+    print("display ALL 'Estudios'")
+    separator_items
+    print("display from 'leftbar' all <li> items")
+    separator_items
+    print("get and display all available social media with its links")
+    separator_items
     print("count all <a>:")
     
+def cs():
+    separator_parts()
 output = out_txt()
 file = open("sample.txt","w")
 file.write(output)
