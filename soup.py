@@ -16,9 +16,28 @@ soup = BeautifulSoup(html_content, "html.parser")
 # print if needed, gets too noisy
 #print(soup.prettify())
 
-print(soup.title)
-print(soup.title.string)
+def separator_items():
+    print ("-----------------------------------------------------------------------------------------------------------------------------")
+    
+def separator_parts():
+    print ("=============================================================================================================================")
 
-for div in soup.find_all("div"):
-    print(div)
-    print("--------------------------")
+def out_txt():
+    print ("Output exceeds 30 lines, sending output to: <logfile>")
+    return "Hello World"
+
+def portal():
+    print ("GET the title and print it:")
+    print("GET the Complete Address of UFM:")
+    print("GET the phone number and info email:")
+    print("GET all item that are part of the upper nav menu (id: menu-table):")
+    print("find all properties that have href (link to somewhere):")
+    print("GET href of 'UFMail' button:")
+    print("GET href 'MiU' button:")
+    print("get hrefs of all <img>")
+    print("count all <a>:")
+    
+output = out_txt()
+file = open("sample.txt","w")
+file.write(output)
+file.close()
