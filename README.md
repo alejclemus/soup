@@ -282,7 +282,7 @@ using ["https://www.ufm.edu/Directorio"](https://www.ufm.edu/Directorio)
 
 
 ## 5. Extra
-- [ ] Complete Dockerfile
+- [x] Complete Dockerfile
 - [ ] Create README section for Dockerfile under [`Usage Dockerfile`](#usage-dockerfile)
 - [ ] Add CI to your own repo.
 
