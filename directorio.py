@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup
 import requests,sys,csv,json
 
-url="http://ufm.edu/Estudios"
+url="https://www.ufm.edu/Directorio"
 
 # Make a GET request to fetch the raw HTML content
 try:
@@ -23,4 +23,7 @@ def separator_items():
 def separator_parts():
     print ("=============================================================================================================================")
      
- 
+def directorio():
+    separator_parts()
+    
+directorio()
