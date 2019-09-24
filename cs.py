@@ -25,5 +25,37 @@ def separator_parts():
      
 def cs():
     separator_parts()
+    print("3. CS")
+    ##TITLE
+    print("GET title: "+soup.title.string)
+    
+    ##LOGO
+    separator_items()
+    print("Download the 'FACULTAD de CIENCIAS ECONOMICAS' logo. (you need to obtain the link dynamically)")
+    
+    
+    ##META
+    separator_items()
+    print(f"GET following <meta>: 'title', 'description' ('og')")
+    title = soup.find("meta",  property="og:title")
+    description = soup.find("meta",  property="og:description")
+    print(f"- title: {title['content']}")
+    print(f"- description: {description['content']}")
+    
+    ##<a>
+    separator_items()
+    countA=0
+    for a in soup.find_all("a"):
+        countA=countA+1
+    print("count all <a>: "+str(countA))
+    
+    ##<div>
+    separator_items()
+    countD=0
+    for div in soup.find_all("div"):
+        countD=countD+1
+    print("count all <div>: "+str(countD))
+    
+    separator_parts()
     
 cs()
