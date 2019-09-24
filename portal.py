@@ -90,6 +90,6 @@ def portal():
         count=count+1
     print("count all <a>: "+str(count))
     
-    separator_parts()  
-    
+    separator_parts()
+
 portal()

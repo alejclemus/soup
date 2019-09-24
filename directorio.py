@@ -47,4 +47,5 @@ def directorio():
     for a in words_starting_with_vowel:
         count=count+1
     print("Count all emails that start with a vowel: "+str(count))
+
 directorio()

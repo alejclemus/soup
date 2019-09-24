@@ -1,26 +1,19 @@
-#!/usr/bin/env python3
-from bs4 import BeautifulSoup
-import requests,sys,csv,json
+import cs,estudios,directorio,portal
 
-url="http://ufm.edu/Estudios"
+def All():
+    return portal(),estudios(),cs(),directorio()
 
-# Make a GET request to fetch the raw HTML content
-try:
-    html_content = requests.get(url).text
-except:
-    print(f"unable to get {url}")
-    sys.exit(1)
+def first():
+    return portal()
 
-# Parse the html content, this is the Magic ;)
-soup = BeautifulSoup(html_content, "html.parser")
+def second():
+    return estudios()
 
-# print if needed, gets too noisy
-#print(soup.prettify())
+def third():
+    return cs()
 
-def separator_items():
-    print ("-----------------------------------------------------------------------------------------------------------------------------")
-    
-def separator_parts():
-    print ("=============================================================================================================================")
-     
+def fourth():
+    return directorio()
  
+print("Alejandra Lemus")
+
