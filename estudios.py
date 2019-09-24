@@ -26,7 +26,7 @@ def separator_parts():
  
 def estudios():
     separator_parts()  
-    
+    print("2. Estudios")
     ##ITEMS
     separator_items()
     print("display all items from 'topmenu':")

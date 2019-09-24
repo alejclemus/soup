@@ -25,6 +25,7 @@ def separator_parts():
      
 def portal():
     separator_parts()
+    print("1. Portal")
     ##TITLE
     print ("GET the title and print it: "+soup.title.string)
     separator_items()
